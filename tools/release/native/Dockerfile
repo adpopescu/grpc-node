@@ -15,7 +15,9 @@ RUN apt-get install -y cmake curl build-essential \
     gcc-x86-64-linux-gnu g++-x86-64-linux-gnu binutils \
     gcc-aarch64-linux-gnu g++-aarch64-linux-gnu make \
     gcc g++ gzip bash libc6-amd64-i386-cross \
-    libc6-dev-amd64-i386-cross
+    libc6-dev-amd64-i386-cross libc6-dev-s390x-cross \
+    libstdc++6-s390x-cross gcc-s390x-linux-gnu \
+    g++-s390x-linux-gnu
 
 RUN mkdir /usr/local/nvm
 ENV NVM_DIR /usr/local/nvm
