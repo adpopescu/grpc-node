@@ -89,7 +89,7 @@ if [ "$FAILED" = "true" ]
 then
   exit 1
 else
-  if [ "$OS" = "Linux" ] && [ "$ARCH" != "aarch64"]
+  if [ "$OS" = "Linux" ] && [ "$ARCH" != "aarch64" ] && [ "$ARCH" != "s390x" ]
   then
     # If we can't download the token file, just skip reporting coverage
     gsutil cp gs://grpc-testing-secrets/coveralls_credentials/grpc-node.rc /tmp || exit 0
